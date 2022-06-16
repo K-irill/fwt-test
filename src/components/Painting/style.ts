@@ -126,7 +126,14 @@ export const PaintingInfoBottom = styled.div`
     font-size: 12.5px;
 
     span {
-      font-size: 12.5px;
+      font-size: 11px;
+    }
+
+    &:hover {
+      span {
+        width: 200px;
+      }
+      
     }
   }
 `;

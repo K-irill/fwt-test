@@ -34,20 +34,6 @@ export const searchPaintings = createAsyncThunk(
   }
 );
 
-export const fetchPaintingsLimit = createAsyncThunk(
-  "paintings/fetchLimit",
-  async ({ page, limit }: { page: number; limit: number }, thunkAPI) => {
-    try {
-      const response = await axios.get<IPaintig[]>(
-        `https://test-front.framework.team/paintings?_page=${page}&_limit=${limit}`
-      );
-      return response.data;
-    } catch (error: any) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
-
 export const fetchAuthors = createAsyncThunk(
   "paintings/authors",
   async (_, thunkAPI) => {

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { useAppSelector } from "../../hooks/redux";
+import { useAppDispath, useAppSelector } from "../../hooks/redux";
 import {
   PaintingsContainer,
   Painting,
@@ -14,7 +14,6 @@ const PaintingPage: FC = () => {
     (state) => state.paintingsReducer
   );
   const { authors, locations } = useAppSelector((state) => state.selectReducer);
-
   const searchAuthor = (id: string) => {
     let author: string = "";
 
