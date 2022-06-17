@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { IItem, IPaintig, IQuery } from "../types";
+import { IItem, IQuery } from "../types";
 
 export const searchPaintings = createAsyncThunk(
   "paintings/search",

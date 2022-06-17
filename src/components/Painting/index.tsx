@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-import { useAppDispath, useAppSelector } from "../../hooks/redux";
+import { useAppSelector } from "../../hooks/redux";
 import {
   PaintingsContainer,
   Painting,
   PaintingInfoBottom,
   LoadingContainer,
+  ImgPainting,
 } from "./style";
-// import CircularProgress from "@mui/material/CircularProgress";
 import { Alert, AlertTitle, CircularProgress } from "@mui/material";
 
 const PaintingPage: FC = () => {
@@ -31,10 +31,13 @@ const PaintingPage: FC = () => {
     });
     return location;
   };
-
   const painting = paintings.map((el) => {
     return (
       <Painting imgUrl={el.imageUrl} key={el.id}>
+        <ImgPainting
+          src={`https://test-front.framework.team/${el.imageUrl}`}
+          alt="Painting image"
+        />
         <PaintingInfoBottom>
           <span>{el.name}</span>
           <div>

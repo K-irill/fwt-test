@@ -14,6 +14,7 @@ const animation = keyframes`
 `;
 
 export const PaintingsContainer = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 360px 360px 360px;
   grid-column-gap: 20px;
@@ -34,13 +35,30 @@ export const PaintingsContainer = styled.div`
   }
 `;
 
+export const ImgPainting = styled.img`
+position: absolute;
+width:360px;
+height: 275px;
+border-radius: 20px;
+
+@media ${(props) => props.theme.media.tab1024} {
+    width:  300px;
+    height: 230px;
+  }
+  @media ${(props) => props.theme.media.tab768} {
+    width:  340px;
+    height: 249px;
+  }
+  @media ${(props) => props.theme.media.phone} {
+    width:  280px;
+    height: 205px;
+  }
+`
+
 export const Painting = styled.div<Props>`
   display: grid;
   align-content: end;
   height: 275px;
-  background: ${({ imgUrl }) =>
-      `url(${"https://test-front.framework.team/" + imgUrl})`}
-    no-repeat center / cover;
   border-radius: 20px;
   margin-bottom: 20px;
 
@@ -56,6 +74,7 @@ export const Painting = styled.div<Props>`
 `;
 
 export const PaintingInfoBottom = styled.div`
+  z-index: 1;
   width: 330px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
