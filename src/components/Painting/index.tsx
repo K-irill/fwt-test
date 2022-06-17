@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 import { useAppSelector } from "../../hooks/redux";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import {
   PaintingsContainer,
   Painting,
@@ -34,10 +36,17 @@ const PaintingPage: FC = () => {
   const painting = paintings.map((el) => {
     return (
       <Painting imgUrl={el.imageUrl} key={el.id}>
-        <ImgPainting
-          src={`https://test-front.framework.team/${el.imageUrl}`}
-          alt="Painting image"
-        />
+        <ImgPainting>
+          <LazyLoadImage
+            effect="blur"
+            src={`https://test-front.framework.team/${el.imageUrl}`}
+            alt={`Painting image ${el.name}`}
+            placeholderSrc={
+              "https://developer.android.com/codelabs/basic-android-kotlin-training-internet-images/img/467c213c859e1904.png"
+            }
+          />
+        </ImgPainting>
+
         <PaintingInfoBottom>
           <span>{el.name}</span>
           <div>

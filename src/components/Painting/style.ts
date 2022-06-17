@@ -35,23 +35,51 @@ export const PaintingsContainer = styled.div`
   }
 `;
 
-export const ImgPainting = styled.img`
+export const ImgPainting = styled.div`
 position: absolute;
+span {
+width:  360px;
+height: 275px;
+border-radius: 20px;
+}
+
+img {
 width:360px;
 height: 275px;
 border-radius: 20px;
+}
+
+
 
 @media ${(props) => props.theme.media.tab1024} {
+  span {
     width:  300px;
     height: 230px;
   }
+  img {
+    width:  300px;
+    height: 230px;
+  }
+  }
   @media ${(props) => props.theme.media.tab768} {
+    span {
+      width:  340px;
+    height: 249px;
+  }
+    img {
     width:  340px;
     height: 249px;
   }
+  }
   @media ${(props) => props.theme.media.phone} {
+    span {
+      width:  280px;
+    height: 205px;
+  }
+    img {
     width:  280px;
     height: 205px;
+  }
   }
 `
 
