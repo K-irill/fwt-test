@@ -14,7 +14,6 @@ const animation = keyframes`
 `;
 
 export const PaintingsContainer = styled.div`
-  position: relative;
   display: grid;
   grid-template-columns: 360px 360px 360px;
   grid-column-gap: 20px;
@@ -36,54 +35,53 @@ export const PaintingsContainer = styled.div`
 `;
 
 export const ImgPainting = styled.div`
-position: absolute;
-span {
-width:  360px;
-height: 275px;
-border-radius: 20px;
-}
-
-img {
-width:360px;
-height: 275px;
-border-radius: 20px;
-}
-
-
-
-@media ${(props) => props.theme.media.tab1024} {
+  position: absolute;
   span {
-    width:  300px;
-    height: 230px;
+    width: 360px;
+    height: 275px;
+    border-radius: 20px;
   }
+
   img {
-    width:  300px;
-    height: 230px;
+    width: 360px;
+    height: 275px;
+    border-radius: 20px;
   }
+
+  @media ${(props) => props.theme.media.tab1024} {
+    span {
+      width: 300px;
+      height: 230px;
+    }
+    img {
+      width: 300px;
+      height: 230px;
+    }
   }
   @media ${(props) => props.theme.media.tab768} {
     span {
-      width:  340px;
-    height: 249px;
-  }
+      width: 340px;
+      height: 249px;
+    }
     img {
-    width:  340px;
-    height: 249px;
-  }
+      width: 340px;
+      height: 249px;
+    }
   }
   @media ${(props) => props.theme.media.phone} {
     span {
-      width:  280px;
-    height: 205px;
-  }
+      width: 280px;
+      height: 205px;
+    }
     img {
-    width:  280px;
-    height: 205px;
+      width: 280px;
+      height: 205px;
+    }
   }
-  }
-`
+`;
 
 export const Painting = styled.div<Props>`
+  position: relative;
   display: grid;
   align-content: end;
   height: 275px;
@@ -180,7 +178,6 @@ export const PaintingInfoBottom = styled.div`
       span {
         width: 200px;
       }
-      
     }
   }
 `;
