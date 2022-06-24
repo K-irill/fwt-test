@@ -80,7 +80,7 @@ export const ToogleDelete = styled.div<Props>`
 `;
 
 export const SelectList = styled.ul<Props>`
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   list-style: none;
   display: ${(props) => (props.selectOpen ? "block" : "none")};

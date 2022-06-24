@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as Dash } from "../../images/dash.svg";
 
 export const SelectChildren = styled.input`
+  z-index: 1;
   width: 95px;
   height: 45px;
   box-sizing: border-box;

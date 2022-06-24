@@ -53,6 +53,7 @@ export const RangeArrow = styled.div<Props>`
 `;
 
 export const RangeOpen = styled.div<Props>`
+  z-index: 2;
   position: absolute;
   display: ${({ selectOpen }) => (selectOpen ? "flex" : "none")};
   justify-content: center;
